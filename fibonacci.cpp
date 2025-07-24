@@ -3,24 +3,16 @@ using namespace std;
 
 
 int fib(int n){
-    int j = 0;
+    int j = 1;
     int i = 0;
-    for(int k = 0;k <n; k++){
-        if (i==0){
-            cout << i << " ";
-            i++;
-        }
-        else{
-            int sum = (i+j);
-            cout << sum <<" ";
-            if (k > 1){
-                j = i;
-            }
-            i = sum;
-        }
+    for(int k = 0;k < n; k++){
+        int sum = (i+j);
+        cout << i <<" ";
+        i = j;
+        j = sum;
     }          
 }
 int main(){
-    fib(20);
+    fib(10);
     return 0;
 }
